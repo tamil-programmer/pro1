@@ -26,13 +26,17 @@
     <h1 class="d-flex justify-content-center">LOGIN FORM</h1>
 
 <div class="container">
-<form  class="d-block text-center" "index.hbs" method="post">
+<form  class="d-block text-center" action="/auth/login" method="post">
 <label for="">ID</label><br>
 <input class="boxy"  name="id" type="text"><br>
 <label for="">Password</label><br>
 <input class="boxy" name="pwd" type="text"><br><br>
-<button class="boxy btn btn-primary"  type="submit">LOGIN</button>
-<button class="btn btn-"></button>
+<button class="boxy btn btn-primary"  type="submit">LOGIN</button><br><br>
+{{#if mess}}
+<button class="btn btn-success boxy"> 
+{{mess}}
+</button>
+{{/if}}
 </form>
 
 </div>
